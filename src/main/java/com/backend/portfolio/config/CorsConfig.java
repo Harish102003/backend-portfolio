@@ -14,11 +14,7 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/api/**")
-                        .allowedOrigins(
-                                "http://localhost:5173", // Vite dev server
-                                "http://localhost:3000" // CRA dev server (if used)
-                // "https://your-production-domain.com" // ← replace before deploying
-                )
+                        .allowedOrigins("https://portfolio-harish-10.vercel.app")
                         .allowedMethods("GET", "POST", "OPTIONS")
                         .allowedHeaders("*");
             }
